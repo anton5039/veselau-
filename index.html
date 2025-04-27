@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Весёлый кликер</title>
+    <style> body { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f7f7ff; font-family: 'Comic Sans MS', cursive, sans-serif; } .message-box { text-align: center; max-width: 60%; margin-top: 20px; line-height: 1.5; font-size: 24px; color: #333; } button { padding: 20px 40px; font-size: 24px; cursor: pointer; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.2s ease-in-out; } button:hover { transform: scale(1.1); } </style>
+</head>
+<body>
+<div class="container">
+    <h1>Весёлый кликер</h1>
+    <p class="message-box"></p>
+    <button onclick="showRandomMessage()">Нажми сюда!</button>
+</div>
+
+<script> const messages = [ "Ой-ой, опять кто-то тут бегал!", "Хватит тыкать, лучше пойдем чай пить!", "А ну-ка, быстро отпусти мою кнопку!", "Знаешь, какая лучшая шутка? Ты!", "Ух ты, попался наконец-то!", "Ну вот, а говорили, что руки золотые...", "Теперь мы квиты, хе-хе!", "Ого, кажется, твоя рука застряла здесь навсегда!" ]; let messageBox = document.querySelector('.message-box'); function showRandomMessage() { const randomIndex = Math.floor(Math.random() * messages.length); messageBox.textContent = messages[randomIndex]; } </script>
+</body>
+</html>
